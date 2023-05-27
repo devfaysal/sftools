@@ -1,0 +1,13 @@
+{
+    "name": "SkuGenerator",
+    "alias": "skugenerator",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\SkuGenerator\\Providers\\SkuGeneratorServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

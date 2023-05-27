@@ -1,0 +1,16 @@
+{
+    "Name" : "Name",
+    "Email" : "e-mail",
+    "Phone" : "Phone",
+    "Password" : "Password",
+    "Product Name" : "Produktname",
+    "MU-Varient" : "MU-VariantenID",
+    "MS-Varient" : "MS-VariantenID",
+    "ON-Varient" : "ON-VariantenID",
+    "Stock" : "Bestand",
+    "Minimum Stock" : "Mindestbestand",
+    "Add product" : "Produkt hinzufügen",
+    "Add new product" : "neues Produkt hinzufügen",
+    "Save" : "speichern"
+    
+}
