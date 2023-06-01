@@ -10,6 +10,7 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -38,7 +39,7 @@ class PostingResource extends Resource
                 TextColumn::make('postingaccount_debit'),
                 TextColumn::make('postingaccount_credit'),
                 TextColumn::make('vat'),
-                TextColumn::make('status')
+                IconColumn::make('status')->boolean(),
             ])
             ->filters([
                 //

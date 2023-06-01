@@ -10,6 +10,9 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\BooleanColumn;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -31,7 +34,13 @@ class PlentyMarketProductResource extends Resource
     {
         return $table
             ->columns([
-                //
+            TextColumn::make('product_name')->wrap(),
+            TextColumn::make('mu_varient'),
+            TextColumn::make('ms_varient'),
+            TextColumn::make('on_varient'),
+            TextColumn::make('stock'),
+            TextColumn::make('minimum_stock'),
+            IconColumn::make('status')->boolean(),
             ])
             ->filters([
                 //

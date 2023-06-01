@@ -10,6 +10,7 @@ use Filament\Resources\Form;
 use Filament\Resources\Resource;
 use Filament\Resources\Table;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 
@@ -31,16 +32,21 @@ class ZettleResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('amount')->getStateUsing(function (Zettle $record) {
+                    return '€' . $record->amount/100;
+                }),
+                TextColumn::make('originatorTransactionType')->label('Transaction Type'),
+                TextColumn::make('originatingTransactionUuid')->label('Transaction Uuid'),
+                TextColumn::make('timestamp')->dateTime('Y-m-d h:i:s a'),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                // Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\DeleteBulkAction::make(),
+                // Tables\Actions\DeleteBulkAction::make(),
             ]);
     }
     
